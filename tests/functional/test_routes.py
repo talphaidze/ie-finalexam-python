@@ -30,7 +30,7 @@ def test_create_account(testing_client):
     assert response.status_code == 200
 
 
-def test_create_account(testing_client):
+def test_modify_account(testing_client):
     """
     GIVEN a Flask application
     WHEN the '/accounts' page is posted to (PUT)
