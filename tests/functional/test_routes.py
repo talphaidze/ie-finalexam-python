@@ -30,3 +30,11 @@ def test_create_account(testing_client):
     assert response.status_code == 200
 
 
+def test_create_account(testing_client):
+    """
+    GIVEN a Flask application
+    WHEN the '/accounts' page is posted to (PUT)
+    THEN check the response is valid
+    """
+    response = testing_client.put('/accounts', json={'name': 'John Doe'})
+    assert response.status_code == 200
